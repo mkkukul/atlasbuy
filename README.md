@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AtlasBuy: The Intelligent Global Commerce Agent 🤖🛒
 
-## Getting Started
+> **"Discover globally. Compare intelligently. Buy confidently."**
 
-First, run the development server:
+## 🚀 The Problem
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+In the era of Agentic Commerce, AI agents can browse and purchase items. However, letting an AI spend money freely is a massive security risk. A simple budget limit is not enough. Users need a system that ensures the AI is buying the **right product**, from the **right seller**, at the **right time**, and with **indisputable cryptographic proof**.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 💡 The Solution: AtlasBuy
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+AtlasBuy is a Full-Stack Deterministic Control Plane and Mission Control dashboard that sits between the AI and the global market.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 🧬 Core Innovations:
 
-## Learn More
+1. **AI Findeks (Trust Score):** Just like humans have credit scores, our AI agents have a 4-dimensional Trust Score. Based on budget discipline and seller loyalty, the AI earns a "Dynamic Spending Limit". A score >70 grants Autonomous Buying power.
+2. **Shopping Constitution (Deterministic Gates):** AI might hallucinate, but math doesn't. A rule-based engine evaluates every transaction against strict Budget, Seller Trust, and Delivery Time constraints. If a gate turns red, **the payment API is never contacted.**
+3. **Agent Debate:** The UI simulates a clash between the **Buyer Agent** (wants to buy) and the **Challenger Agent** (analyzes market intel, shipping, and rules).
+4. **SpendProof Certificates:** Every successful transaction generates a cryptographically signed receipt (SHA-256 Hash + HMAC Signature). No certificate, no payment.
+5. **Global Marketplace Integration:** Simulates real-time search across Amazon, Alibaba, and AliExpress.
 
-To learn more about Next.js, take a look at the following resources:
+## 🏗️ Architecture & Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Frontend:** Next.js 15 (App Router), Tailwind CSS, Framer Motion (Premium Dark Mode UI).
+- **Backend API:** Next.js API Routes (`/api/process`).
+- **Core Logic:** TypeScript (`gate-engine.ts`, `certificate.ts`).
+- **I18n:** Full native support for English and Turkish.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🎮 How to Run & Test the Engine
 
-## Deploy on Vercel
+1. Clone the repo: `git clone https://github.com/mkkukul/atlasbuy.git`
+2. Install dependencies: `npm install`
+3. Run the development server: `npm run dev`
+4. Open [http://localhost:3000](http://localhost:3000)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 🧪 Testing the Scenarios:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **The Safe Buy (Amazon - $25):** Passes all gates (Budget, Limit, Seller, Delivery). Generates the SpendProof Certificate.
+- **The Slow Delivery (Alibaba - $15):** Fails the "Delivery Time" gate (14 days). Transaction is blocked.
+- **The Scam Seller (ScamStore - $10):** Fails the "Seller Trust" gate. Transaction is blocked.
+
+## 🇹🇷 Türkçe Özet
+
+AtlasBuy, otonom yapay zekaların küresel pazarda güvenli alışveriş yapmasını sağlayan bir "Görev Kontrol" platformudur. Yapay zekanın bir banka müşterisi gibi "Findeks Skoru" vardır. Sistem, "Alışveriş Anayasası" (Deterministik Kapılar) sayesinde AI'ın bütçesini aşmasını, sahte satıcılardan alışveriş yapmasını veya kargosu yetişmeyecek ürünleri almasını engeller. Başarılı her işlem sonunda değiştirilemez bir "SpendProof" (Kriptografik Karar Sertifikası) üretir.
